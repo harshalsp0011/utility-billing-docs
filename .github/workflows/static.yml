@@ -1,0 +1,17 @@
+title: Utility Billing AI Documentation
+author: Troy & Banks Team
+logo: uploads/logo.png
+
+execute:
+  execute_notebooks: off
+
+repository:
+  url: https://github.com/YOUR_USERNAME/utility-billing-docs
+
+html:
+  use_repository_button: true
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - html_image
