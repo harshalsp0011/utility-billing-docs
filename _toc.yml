@@ -1,0 +1,9 @@
+format: jb-book
+root: index
+chapters:
+  - file: project_overview
+  - file: experiments
+  - file: ui_showcase
+  - file: deliverables
+  - file: results
+  - file: future_work

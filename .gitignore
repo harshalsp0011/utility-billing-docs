@@ -1,0 +1,39 @@
+# .gitignore for Jupyter Book
+
+# Jupyter Book build files
+_build/
+.jupyter_cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Large uploads (optional - remove if you want to commit large files)
+# uploads/**/*.mp4
+# uploads/**/*.mov
+# uploads/**/*.zip
