@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Project Overview &#8212; Utility Billing AI Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'project_overview';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Experiments &amp; Methods" href="experiments.html" />
+    <link rel="prev" title="The Agentic Auditor - Utility Billing AI" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Utility Billing AI Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    The Agentic Auditor - Utility Billing AI
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments &amp; Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui_showcase.html">UI Showcase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deliverables.html">Deliverables &amp; Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">Results &amp; Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future_work.html">Future Work &amp; Recommendations</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/YOUR_USERNAME/utility-billing-docs" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/project_overview.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project Overview</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-solution">Our Solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-architecture">System Architecture</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tariff-analysis-pipeline-3-steps">Tariff Analysis Pipeline (3 Steps)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-components">Additional Components</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tech-stack">Tech Stack</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team">Team</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-goals">Project Goals</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="project-overview">
+<h1>Project Overview<a class="headerlink" href="#project-overview" title="Permalink to this heading">#</a></h1>
+<section id="problem-statement">
+<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
+<p>Utility bill auditing is time-consuming and error-prone when done manually. Companies need to validate thousands of bills against complex tariff structures.</p>
+<p><strong>Challenges:</strong></p>
+<ul class="simple">
+<li><p>Complex tariff documents (100+ pages)</p></li>
+<li><p>Manual review takes 30-60 minutes per bill</p></li>
+<li><p>Human error in calculations</p></li>
+<li><p>Difficult to scale</p></li>
+</ul>
+</section>
+<section id="our-solution">
+<h2>Our Solution<a class="headerlink" href="#our-solution" title="Permalink to this heading">#</a></h2>
+<p>AI-powered system that automates utility bill auditing through a <strong>3-step tariff analysis pipeline</strong>:</p>
+<ul class="simple">
+<li><p>PDF text extraction with page-by-page processing</p></li>
+<li><p>Tariff grouping by Service Classification (SC)</p></li>
+<li><p>LLM-based logic extraction using OpenAI GPT-4o-mini</p></li>
+<li><p>Automated workflows with Apache Airflow</p></li>
+<li><p>Interactive web dashboard</p></li>
+</ul>
+</section>
+<section id="system-architecture">
+<h2>System Architecture<a class="headerlink" href="#system-architecture" title="Permalink to this heading">#</a></h2>
+<p>The system uses a <strong>pipeline-based architecture</strong> with the following components:</p>
+<section id="tariff-analysis-pipeline-3-steps">
+<h3>Tariff Analysis Pipeline (3 Steps)<a class="headerlink" href="#tariff-analysis-pipeline-3-steps" title="Permalink to this heading">#</a></h3>
+<p><strong>Step 1: PDF Text Extraction</strong> (<code class="docutils literal notranslate"><span class="pre">pagewise_text_extractor.py</span></code>)</p>
+<ul class="simple">
+<li><p>Extracts text from each PDF page</p></li>
+<li><p>Stores raw extracted text in S3 (<code class="docutils literal notranslate"><span class="pre">raw_extracted_tarif.json</span></code>)</p></li>
+</ul>
+<p><strong>Step 2: Tariff Grouping</strong> (<code class="docutils literal notranslate"><span class="pre">group_extracted_raw_text.py</span></code>)</p>
+<ul class="simple">
+<li><p>Groups tariffs by Service Classification (SC1, SC2, SC3, etc.)</p></li>
+<li><p>Organizes rate structures by service class</p></li>
+<li><p>Outputs grouped tariffs to S3 (<code class="docutils literal notranslate"><span class="pre">grouped_tariffs.json</span></code>)</p></li>
+</ul>
+<p><strong>Step 3: LLM Logic Extraction</strong> (<code class="docutils literal notranslate"><span class="pre">extract_logic_llm_call.py</span></code>)</p>
+<ul class="simple">
+<li><p>Uses OpenAI GPT-4o-mini to understand billing logic</p></li>
+<li><p>Extracts structured tariff rules and formulas</p></li>
+<li><p>Produces final logic output to S3 (<code class="docutils literal notranslate"><span class="pre">final_logic_output.json</span></code>)</p></li>
+</ul>
+</section>
+<section id="additional-components">
+<h3>Additional Components<a class="headerlink" href="#additional-components" title="Permalink to this heading">#</a></h3>
+<p><strong>Document Processor</strong> (<code class="docutils literal notranslate"><span class="pre">utility_bill_doc_processor.py</span></code>)</p>
+<ul class="simple">
+<li><p>Processes utility bill PDFs</p></li>
+<li><p>Extracts billing data, account info, consumption</p></li>
+</ul>
+<p><strong>Audit Calculation Engine</strong> (<code class="docutils literal notranslate"><span class="pre">calculation_engine.py</span></code>, <code class="docutils literal notranslate"><span class="pre">calc_engine_updated.py</span></code>)</p>
+<ul class="simple">
+<li><p>Recalculates charges based on extracted tariff logic</p></li>
+<li><p>Compares calculated vs actual charges</p></li>
+</ul>
+<p><strong>Supporting Modules</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_db_loader.py</span></code> - Loads tariff rules into database</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prompts_to_extract_logic.py</span></code> - LLM prompt engineering for tariff extraction</p></li>
+</ul>
+</section>
+</section>
+<section id="tech-stack">
+<h2>Tech Stack<a class="headerlink" href="#tech-stack" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Python 3.10+</strong>: Core language</p></li>
+<li><p><strong>OpenAI GPT-4o-mini</strong>: LLM for tariff logic extraction and analysis</p></li>
+<li><p><strong>PostgreSQL</strong>: Primary database (AWS RDS cluster)</p></li>
+<li><p><strong>Apache Airflow 3.1.0</strong>: Workflow orchestration with REST API v2</p></li>
+<li><p><strong>Streamlit</strong>: Interactive web dashboard “The Agentic Auditor”</p></li>
+<li><p><strong>Docker &amp; Docker Compose</strong>: Containerization</p></li>
+<li><p><strong>AWS S3</strong>: File storage for PDFs and JSON outputs</p></li>
+<li><p><strong>pdfplumber</strong>: PDF text extraction</p></li>
+<li><p><strong>camelot</strong>: Table extraction from PDFs</p></li>
+</ul>
+</section>
+<section id="team">
+<h2>Team<a class="headerlink" href="#team" title="Permalink to this heading">#</a></h2>
+<p><strong>Team Name</strong>: EagleEye</p>
+<p><strong>Members</strong>:</p>
+<ul class="simple">
+<li><p>Harshal Patil</p></li>
+<li><p>Avipsa Bhujabal</p></li>
+<li><p>Aarushi Jugran</p></li>
+</ul>
+<p><strong>Course</strong>: CDA 500 Project, University at Buffalo
+<strong>Duration</strong>: Fall 2024 - Spring 2025</p>
+</section>
+<section id="project-goals">
+<h2>Project Goals<a class="headerlink" href="#project-goals" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>95%+ accuracy in bill validation</p></li>
+<li><p>Process bills in under 2 minutes</p></li>
+<li><p>Reduce manual effort by 90%</p></li>
+<li><p>Scalable to 1000+ bills per day</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Agentic Auditor - Utility Billing AI</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="experiments.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Experiments &amp; Methods</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-solution">Our Solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-architecture">System Architecture</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tariff-analysis-pipeline-3-steps">Tariff Analysis Pipeline (3 Steps)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-components">Additional Components</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tech-stack">Tech Stack</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team">Team</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-goals">Project Goals</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Troy & Banks Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
