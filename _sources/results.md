@@ -29,9 +29,7 @@
 
 ## Case Studies
 
-Add your case studies to `uploads/reports/case_studies/`
-
-Example format:
+Capture case studies directly in this page or link to your repo resources. Suggested template:
 - Customer name (anonymized)
 - Bill complexity
 - Issues found
