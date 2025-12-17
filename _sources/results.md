@@ -58,7 +58,6 @@ Example format:
 
 ## Add Your Results
 
-Upload:
-- Performance graphs to `uploads/reports/performance/`
-- Test results to `uploads/reports/validation/`
-- Screenshots to `uploads/screenshots/`
+- Add performance graphs to the repository’s reports section.
+- Add validation summaries alongside the results narrative.
+- Include key screenshots directly in the markdown or link to hosted assets used for demos.
