@@ -20,7 +20,7 @@ utility-billing-docs/
 ├── deliverables.md       # Links & access
 ├── results.md            # Metrics
 ├── future_work.md        # Next steps
-└── uploads/              # Files (reports, screenshots, docs)
+└── _build/               # Generated site output
 ```
 
 ## Build & View Locally
@@ -83,7 +83,6 @@ git push origin main
 
 - Add team/project details in `project_overview.md`.
 - Keep experiment notes in `experiments.md`.
-- Store assets in `uploads/`.
 
 ---
 

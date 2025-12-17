@@ -36,14 +36,6 @@ Edit `project_overview.md` - add team names and details
 
 Edit `experiments.md` - add what you tried and learned
 
-### Upload Files
-
-```bash
-cp my_notebook.ipynb uploads/experiments/
-cp report.pdf uploads/reports/
-cp screenshot.png uploads/screenshots/
-```
-
 ### Rebuild
 
 ```bash

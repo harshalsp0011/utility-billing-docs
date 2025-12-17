@@ -85,31 +85,6 @@ For each experiment, document:
 
 ---
 
-## Add Your Experiments Here
-
-Upload your experiment notebooks to `uploads/experiments/` and document them using this format:
-
-```markdown
-## Experiment Title
-
-**Date**: YYYY-MM-DD
-**Status**: ✅ Success / ❌ Failed / ⚠️ Partial
-
-**Objective**: What you wanted to achieve
-
-**Approach**: How you did it
-
-**Results**: 
-- Metric 1: value
-- Metric 2: value
-
-**Outcome**: Success or failure and why
-
-**Lessons Learned**:
-- Key insight 1
-- Key insight 2
-```
-
 ## Key Lessons
 
 1. **Start simple** - Don't over-engineer early

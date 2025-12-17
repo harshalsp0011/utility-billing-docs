@@ -29,9 +29,7 @@
 
 ## Case Studies
 
-Add your case studies to `uploads/reports/case_studies/`
-
-Example format:
+Capture case studies directly in this page or link to your repo resources. Suggested template:
 - Customer name (anonymized)
 - Bill complexity
 - Issues found
@@ -58,7 +56,6 @@ Example format:
 
 ## Add Your Results
 
-Upload:
-- Performance graphs to `uploads/reports/performance/`
-- Test results to `uploads/reports/validation/`
-- Screenshots to `uploads/screenshots/`
+- Add performance graphs to the repository’s reports section.
+- Add validation summaries alongside the results narrative.
+- Include key screenshots directly in the markdown or link to hosted assets used for demos.
