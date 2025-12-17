@@ -339,9 +339,9 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-inside">What’s Inside</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">Structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-view">Build &amp; View</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-your-content">Add Your Content</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-to-github-pages">Publish to GitHub Pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-view-locally">Build &amp; View Locally</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-online-book-manual-refresh">Update the Online Book (manual refresh)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-via-github-actions-preferred">Publish via GitHub Actions (preferred)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
 </ul>
             </nav>
@@ -356,16 +356,15 @@ document.write(`
                   
   <section id="utility-billing-ai-documentation">
 <h1>Utility Billing AI - Documentation<a class="headerlink" href="#utility-billing-ai-documentation" title="Permalink to this heading">#</a></h1>
-<p>Simple documentation for your AI-Powered Utility Billing System project.</p>
+<p>Project docs for the AI-Powered Utility Billing System.</p>
 <section id="what-s-inside">
 <h2>What’s Inside<a class="headerlink" href="#what-s-inside" title="Permalink to this heading">#</a></h2>
-<p>Just 5 simple pages:</p>
 <ol class="arabic simple">
-<li><p><strong>Project Overview</strong> - Problem, solution, tech stack, team</p></li>
-<li><p><strong>Experiments</strong> - What we tried, what worked, lessons learned</p></li>
-<li><p><strong>Deliverables</strong> - Code links, dashboard access</p></li>
-<li><p><strong>Results</strong> - Performance metrics</p></li>
-<li><p><strong>Future Work</strong> - Recommendations</p></li>
+<li><p><strong>Project Overview</strong> – Problem, solution, tech stack, team</p></li>
+<li><p><strong>Experiments</strong> – What we tried, what worked, lessons learned</p></li>
+<li><p><strong>Deliverables</strong> – Code links, dashboard access</p></li>
+<li><p><strong>Results</strong> – Performance metrics</p></li>
+<li><p><strong>Future Work</strong> – Recommendations</p></li>
 </ol>
 </section>
 <section id="structure">
@@ -377,71 +376,72 @@ document.write(`
 ├── deliverables.md       # Links &amp; access
 ├── results.md            # Metrics
 ├── future_work.md        # Next steps
-└── uploads/              # Put your files here
-    ├── experiments/      # Notebooks
-    ├── reports/          # PDFs
-    ├── screenshots/      # Images
-    └── docs/             # Guides
+└── _build/               # Generated site output
 </pre></div>
 </div>
 </section>
-<section id="build-view">
-<h2>Build &amp; View<a class="headerlink" href="#build-view" title="Permalink to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Activate venv first</span>
-<span class="nb">cd</span><span class="w"> </span>/Users/patil/Library/CloudStorage/OneDrive-UniversityatBuffalo/Desktop/MS/2.Course/4.Third_Fourth<span class="se">\ </span>Semester/CDA<span class="se">\ </span><span class="m">500</span>/Troy<span class="se">\ \&amp;\ </span>Banks/Code_Base/utility-billing-ai
-<span class="nb">source</span><span class="w"> </span>venv/bin/activate
-
-<span class="c1"># Go to docs folder</span>
-<span class="nb">cd</span><span class="w"> </span>utility-billing-docs
-
-<span class="c1"># Install (first time only)</span>
+<section id="build-view-locally">
+<h2>Build &amp; View Locally<a class="headerlink" href="#build-view-locally" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># From repo root</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 
-<span class="c1"># Build</span>
+<span class="c1"># Build the book</span>
 jupyter-book<span class="w"> </span>build<span class="w"> </span>.
 
-<span class="c1"># View locally</span>
+<span class="c1"># Open locally</span>
 open<span class="w"> </span>_build/html/index.html
 </pre></div>
 </div>
 </section>
-<section id="add-your-content">
-<h2>Add Your Content<a class="headerlink" href="#add-your-content" title="Permalink to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure venv is activated</span>
-<span class="nb">source</span><span class="w"> </span>../venv/bin/activate
-</pre></div>
-</div>
+<section id="update-the-online-book-manual-refresh">
+<h2>Update the Online Book (manual refresh)<a class="headerlink" href="#update-the-online-book-manual-refresh" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Edit the <code class="docutils literal notranslate"><span class="pre">.md</span></code> files with your info</p></li>
-<li><p>Upload files to <code class="docutils literal notranslate"><span class="pre">uploads/</span></code> folder</p></li>
-<li><p>Rebuild: <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code></p></li>
-<li><p>View: <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">_build/html/index.html</span></code></p></li>
+<li><p>Re-build the HTML</p></li>
 </ol>
-</section>
-<section id="publish-to-github-pages">
-<h2>Publish to GitHub Pages<a class="headerlink" href="#publish-to-github-pages" title="Permalink to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure venv is activated</span>
-<span class="nb">source</span><span class="w"> </span>../venv/bin/activate
-
-<span class="c1"># Install ghp-import (first time only)</span>
-pip<span class="w"> </span>install<span class="w"> </span>ghp-import
-
-<span class="c1"># Build</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Refreshes the _build/html folder with your latest changes</span>
 jupyter-book<span class="w"> </span>build<span class="w"> </span>.
 
-<span class="c1"># Publish</span>
+<span class="c1"># If you see stale content, clean first</span>
+jb<span class="w"> </span>clean<span class="w"> </span>.
+jupyter-book<span class="w"> </span>build<span class="w"> </span>.
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Update the website (pushes to gh-pages)</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replaces the old website content on the gh-pages branch and pushes</span>
 ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
 </pre></div>
 </div>
-<p>Your site will be at: <code class="docutils literal notranslate"><span class="pre">https://harshalsp0011.github.io/utility-billing-docs</span></code></p>
+<ol class="arabic simple" start="3">
+<li><p>Update your source code (recommended)</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Updated documentation and code&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</pre></div>
+</div>
+<p>Summary checklist (run inside utility-billing-docs):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>.
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</pre></div>
+</div>
+</section>
+<section id="publish-via-github-actions-preferred">
+<h2>Publish via GitHub Actions (preferred)<a class="headerlink" href="#publish-via-github-actions-preferred" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Workflow: <code class="docutils literal notranslate"><span class="pre">.github/workflows/pages.yml</span></code> builds and deploys on pushes to <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+<li><p>Site URL: https://harshalsp0011.github.io/utility-billing-docs</p></li>
+</ul>
 </section>
 <section id="tips">
 <h2>Tips<a class="headerlink" href="#tips" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong>Update URLs</strong>: Replace <code class="docutils literal notranslate"><span class="pre">YOUR_USERNAME</span></code> with your GitHub username</p></li>
-<li><p><strong>Add team names</strong>: Edit <code class="docutils literal notranslate"><span class="pre">project_overview.md</span></code></p></li>
-<li><p><strong>Document experiments</strong>: Use the template in <code class="docutils literal notranslate"><span class="pre">experiments.md</span></code></p></li>
-<li><p><strong>Upload files</strong>: Put everything in <code class="docutils literal notranslate"><span class="pre">uploads/</span></code> folder</p></li>
+<li><p>Add team/project details in <code class="docutils literal notranslate"><span class="pre">project_overview.md</span></code>.</p></li>
+<li><p>Keep experiment notes in <code class="docutils literal notranslate"><span class="pre">experiments.md</span></code>.</p></li>
 </ul>
 <hr class="docutils" />
 <p><strong>Built with <a class="reference external" href="https://jupyterbook.org/">Jupyter Book</a></strong></p>
@@ -496,9 +496,9 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-inside">What’s Inside</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">Structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-view">Build &amp; View</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-your-content">Add Your Content</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-to-github-pages">Publish to GitHub Pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-view-locally">Build &amp; View Locally</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-online-book-manual-refresh">Update the Online Book (manual refresh)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-via-github-actions-preferred">Publish via GitHub Actions (preferred)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
 </ul>
   </nav></div>

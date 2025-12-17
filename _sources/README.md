@@ -1,16 +1,14 @@
 # Utility Billing AI - Documentation
 
-Simple documentation for your AI-Powered Utility Billing System project.
+Project docs for the AI-Powered Utility Billing System.
 
 ## What's Inside
 
-Just 5 simple pages:
-
-1. **Project Overview** - Problem, solution, tech stack, team
-2. **Experiments** - What we tried, what worked, lessons learned
-3. **Deliverables** - Code links, dashboard access
-4. **Results** - Performance metrics
-5. **Future Work** - Recommendations
+1. **Project Overview** – Problem, solution, tech stack, team
+2. **Experiments** – What we tried, what worked, lessons learned
+3. **Deliverables** – Code links, dashboard access
+4. **Results** – Performance metrics
+5. **Future Work** – Recommendations
 
 ## Structure
 
@@ -22,69 +20,69 @@ utility-billing-docs/
 ├── deliverables.md       # Links & access
 ├── results.md            # Metrics
 ├── future_work.md        # Next steps
-└── uploads/              # Put your files here
-    ├── experiments/      # Notebooks
-    ├── reports/          # PDFs
-    ├── screenshots/      # Images
-    └── docs/             # Guides
+└── _build/               # Generated site output
 ```
 
-## Build & View
+## Build & View Locally
 
 ```bash
-# Activate venv first
-cd /Users/patil/Library/CloudStorage/OneDrive-UniversityatBuffalo/Desktop/MS/2.Course/4.Third_Fourth\ Semester/CDA\ 500/Troy\ \&\ Banks/Code_Base/utility-billing-ai
-source venv/bin/activate
-
-# Go to docs folder
-cd utility-billing-docs
-
-# Install (first time only)
+# From repo root
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 
-# Build
+# Build the book
 jupyter-book build .
 
-# View locally
+# Open locally
 open _build/html/index.html
 ```
 
-## Add Your Content
+## Update the Online Book (manual refresh)
+
+1) Re-build the HTML
 
 ```bash
-# Make sure venv is activated
-source ../venv/bin/activate
-```
-
-1. Edit the `.md` files with your info
-2. Upload files to `uploads/` folder
-3. Rebuild: `jupyter-book build .`
-4. View: `open _build/html/index.html`
-
-## Publish to GitHub Pages
-
-```bash
-# Make sure venv is activated
-source ../venv/bin/activate
-
-# Install ghp-import (first time only)
-pip install ghp-import
-
-# Build
+# Refreshes the _build/html folder with your latest changes
 jupyter-book build .
 
-# Publish
+# If you see stale content, clean first
+jb clean .
+jupyter-book build .
+```
+
+2) Update the website (pushes to gh-pages)
+
+```bash
+# Replaces the old website content on the gh-pages branch and pushes
 ghp-import -n -p -f _build/html
 ```
 
-Your site will be at: `https://harshalsp0011.github.io/utility-billing-docs`
+3) Update your source code (recommended)
+
+```bash
+git add .
+git commit -m "Updated documentation and code"
+git push origin main
+```
+
+Summary checklist (run inside utility-billing-docs):
+
+```bash
+jupyter-book build .
+ghp-import -n -p -f _build/html
+git push origin main
+```
+
+## Publish via GitHub Actions (preferred)
+
+- Workflow: `.github/workflows/pages.yml` builds and deploys on pushes to `main`.
+- Site URL: https://harshalsp0011.github.io/utility-billing-docs
 
 ## Tips
 
-- **Update URLs**: Replace `YOUR_USERNAME` with your GitHub username
-- **Add team names**: Edit `project_overview.md`
-- **Document experiments**: Use the template in `experiments.md`
-- **Upload files**: Put everything in `uploads/` folder
+- Add team/project details in `project_overview.md`.
+- Keep experiment notes in `experiments.md`.
 
 ---
 

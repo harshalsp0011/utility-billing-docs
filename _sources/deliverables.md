@@ -67,18 +67,7 @@ docker-compose up -d
 # Airflow: http://localhost:8080
 ```
 
-## Reports
 
-Upload sample reports to `uploads/reports/`:
-- Audit reports
-- Anomaly reports
-- Performance summaries
-
-## Documentation
-
-- **User Guide**: `uploads/docs/user_guide.pdf`
-- **API Docs**: `uploads/docs/api_docs.pdf`
-- **Admin Guide**: `uploads/docs/admin_guide.pdf`
 
 ## Support
 
