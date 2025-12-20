@@ -27,11 +27,12 @@ Comprehensive UI documentation showing all system components, workflows, and int
 ### Dashboard Features
 
 The Streamlit dashboard provides:
-
-- **Document Upload** - Upload PDF files for processing
-- **Real-time Status** - Track processing progress
-- **Results Viewer** - View extracted data and validation results
-- **Report Download** - Export audit reports
+- **Upload & Ingest** - Upload utility bills and automatically ingest them into the processing pipeline.
+- **Audit Bill** - View extracted bill data and anomaly detection results of uploaded bill PDFs.
+- **Manage Tariffs** - View, upload and maintain versioned tariff definitions used in calculations.
+- **Pipeline Status** - Monitor real-time progress of document processing, validation, and auditing stages.
+- **Generate Reports** - Produce structured audit reports summarizing findings and financial impacts.
+- **Upload History** - Track previously uploaded bills and tariff PDFs.
 
 ### Key UI Components
 
