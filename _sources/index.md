@@ -13,6 +13,7 @@ Welcome to the documentation for **The Agentic Auditor** - an intelligent, multi
 ## About the Project
 
 This system uses a **3-step pipeline** and LLM technology to:
+- Extracts text from utility bill PDF and stores it in a database
 - Extract text from utility tariff PDF documents (page-by-page)
 - Group tariffs by Service Classification (SC1, SC2, SC3, etc.)
 - Extract billing logic using OpenAI GPT-4o-mini

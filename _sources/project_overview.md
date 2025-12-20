@@ -5,8 +5,8 @@
 Utility bill auditing is time-consuming and error-prone when done manually. Companies need to validate thousands of bills against complex tariff structures.
 
 **Challenges:**
-- Complex tariff documents (100+ pages)
-- Manual review takes 30-60 minutes per bill
+- Complex tariff documents (500+ pages)
+- Manual review takes 2-4 hours per bill
 - Human error in calculations
 - Difficult to scale
 
@@ -49,6 +49,14 @@ The system uses a **pipeline-based architecture** with the following components:
 - Recalculates charges based on extracted tariff logic
 - Compares calculated vs actual charges
 
+**Bill Validation Agent** (`anomaly_detector_llm_call.py`)
+- Validates extracted bill data before reporting
+- Flags anomalies and missing fields
+
+**Report Generation Agent** (`report_generator.py`)
+- Generates structured audit reports from validated bill data
+- Summarizes discrepancies, financial impact and audit outcomes
+
 **Supporting Modules**
 - `rule_db_loader.py` - Loads tariff rules into database
 - `prompts_to_extract_logic.py` - LLM prompt engineering for tariff extraction
@@ -75,7 +83,7 @@ The system uses a **pipeline-based architecture** with the following components:
 - Aarushi Jugran
 
 **Course**: CDA 500 Project, University at Buffalo
-**Duration**: Fall 2024 - Spring 2025
+**Duration**: Fall 2025
 
 ## Project Goals
 

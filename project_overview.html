@@ -365,8 +365,8 @@ document.write(`
 <p>Utility bill auditing is time-consuming and error-prone when done manually. Companies need to validate thousands of bills against complex tariff structures.</p>
 <p><strong>Challenges:</strong></p>
 <ul class="simple">
-<li><p>Complex tariff documents (100+ pages)</p></li>
-<li><p>Manual review takes 30-60 minutes per bill</p></li>
+<li><p>Complex tariff documents (500+ pages)</p></li>
+<li><p>Manual review takes 2-4 hours per bill</p></li>
 <li><p>Human error in calculations</p></li>
 <li><p>Difficult to scale</p></li>
 </ul>
@@ -417,6 +417,16 @@ document.write(`
 <li><p>Recalculates charges based on extracted tariff logic</p></li>
 <li><p>Compares calculated vs actual charges</p></li>
 </ul>
+<p><strong>Bill Validation Agent</strong> (<code class="docutils literal notranslate"><span class="pre">anomaly_detector_llm_call.py</span></code>)</p>
+<ul class="simple">
+<li><p>Validates extracted bill data before reporting</p></li>
+<li><p>Flags anomalies and missing fields</p></li>
+</ul>
+<p><strong>Report Generation Agent</strong> (<code class="docutils literal notranslate"><span class="pre">report_generator.py</span></code>)</p>
+<ul class="simple">
+<li><p>Generates structured audit reports from validated bill data</p></li>
+<li><p>Summarizes discrepancies, financial impact and audit outcomes</p></li>
+</ul>
 <p><strong>Supporting Modules</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rule_db_loader.py</span></code> - Loads tariff rules into database</p></li>
@@ -448,7 +458,7 @@ document.write(`
 <li><p>Aarushi Jugran</p></li>
 </ul>
 <p><strong>Course</strong>: CDA 500 Project, University at Buffalo
-<strong>Duration</strong>: Fall 2024 - Spring 2025</p>
+<strong>Duration</strong>: Fall 2025</p>
 </section>
 <section id="project-goals">
 <h2>Project Goals<a class="headerlink" href="#project-goals" title="Permalink to this heading">#</a></h2>

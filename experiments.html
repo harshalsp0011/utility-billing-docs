@@ -364,10 +364,10 @@ document.write(`
 <p>This section documents all experiments conducted during the project - both successes and failures.</p>
 <section id="experiment-format">
 <h2>Experiment Format<a class="headerlink" href="#experiment-format" title="Permalink to this heading">#</a></h2>
-<p>For each experiment, document:</p>
+<p>For each experiment, we have documented:</p>
 <ul class="simple">
-<li><p><strong>What</strong> you tried</p></li>
-<li><p><strong>Why</strong> you tried it</p></li>
+<li><p><strong>What</strong> we have tried</p></li>
+<li><p><strong>Why</strong> we tried it</p></li>
 <li><p><strong>Results</strong> (success/failure with metrics)</p></li>
 <li><p><strong>Lessons learned</strong></p></li>
 </ul>
@@ -376,7 +376,9 @@ document.write(`
 <section id="llm-model-selection">
 <h2>LLM Model Selection<a class="headerlink" href="#llm-model-selection" title="Permalink to this heading">#</a></h2>
 <p><strong>Tried</strong>: GPT-4, GPT-3.5, Claude 3, Llama 3</p>
-<p><strong>Winner</strong>: GPT-4 Turbo</p>
+<p><strong>Why we tried it:</strong>
+To determine which LLM could most accurately parse and extract structured data from diverse and complex utility billing documents, balancing performance, cost and robustness.</p>
+<p><strong>Winner</strong>: GPT-4 mini</p>
 <ul class="simple">
 <li><p>95% accuracy vs 78% for GPT-3.5</p></li>
 <li><p>Best for complex document understanding</p></li>
@@ -387,6 +389,8 @@ document.write(`
 <hr class="docutils" />
 <section id="prompt-engineering">
 <h2>Prompt Engineering<a class="headerlink" href="#prompt-engineering" title="Permalink to this heading">#</a></h2>
+<p><strong>Why we tried it:</strong>
+To systematically optimize the instruction formats and contexts that guide the chosen LLM toward consistent, structured JSON output and near-human accuracy, without needing model retraining.</p>
 <p><strong>Approach</strong>: Tested different prompting strategies</p>
 <p><strong>What Worked</strong>:</p>
 <ul class="simple">
@@ -401,6 +405,8 @@ document.write(`
 <hr class="docutils" />
 <section id="pdf-parsing">
 <h2>PDF Parsing<a class="headerlink" href="#pdf-parsing" title="Permalink to this heading">#</a></h2>
+<p><strong>Why we tried it:</strong>
+Because raw PDF data varies widely in layout and structure; we needed a reliable text extraction baseline before applying LLM understanding, and wanted to quantify how much traditional parsers contributed versus AI understanding alone.</p>
 <p><strong>Tried</strong>: PyPDF2, pdfplumber, PyMuPDF, Tabula</p>
 <p><strong>Winner</strong>: PyPDF2 + LLM combination</p>
 <ul class="simple">
@@ -415,17 +421,20 @@ document.write(`
 <h2>Architecture Evolution<a class="headerlink" href="#architecture-evolution" title="Permalink to this heading">#</a></h2>
 <p><strong>Tried</strong>:</p>
 <ol class="arabic simple">
-<li><p>Monolithic single agent ❌</p></li>
-<li><p>Two-agent system ⚠️</p></li>
-<li><p>Six specialized agents ✅</p></li>
+<li><p>Monolithic single agent</p></li>
+<li><p>Two-agent system</p></li>
+<li><p>Six specialized agents</p></li>
 </ol>
-<p><strong>Why Multi-Agent Won</strong>:</p>
+<p><strong>Why we tried it:</strong>
+To improve scalability, reduce error coupling, and make the system easier to debug as task complexity increased.</p>
+<p><strong>Results</strong>:</p>
 <ul class="simple">
-<li><p>Better modularity</p></li>
-<li><p>Easier to debug</p></li>
-<li><p>Can scale independently</p></li>
-<li><p>Each agent is an expert</p></li>
+<li><p>Single agent: failed under complexity</p></li>
+<li><p>Two agents: partial improvement</p></li>
+<li><p>Multi-agent: successful, production-ready</p></li>
 </ul>
+<p><strong>Lesson</strong>:
+Specialized, modular agents significantly improve accuracy, maintainability, and scalability in complex AI pipelines.</p>
 </section>
 <hr class="docutils" />
 <section id="failed-experiments">

@@ -4,9 +4,9 @@ This section documents all experiments conducted during the project - both succe
 
 ## Experiment Format
 
-For each experiment, document:
-- **What** you tried
-- **Why** you tried it
+For each experiment, we have documented:
+- **What** we have tried
+- **Why** we tried it
 - **Results** (success/failure with metrics)
 - **Lessons learned**
 
@@ -16,7 +16,10 @@ For each experiment, document:
 
 **Tried**: GPT-4, GPT-3.5, Claude 3, Llama 3
 
-**Winner**: GPT-4 Turbo
+**Why we tried it:**
+To determine which LLM could most accurately parse and extract structured data from diverse and complex utility billing documents, balancing performance, cost and robustness.
+
+**Winner**: GPT-4 mini
 - 95% accuracy vs 78% for GPT-3.5
 - Best for complex document understanding
 - Worth the extra cost
@@ -26,6 +29,9 @@ For each experiment, document:
 ---
 
 ## Prompt Engineering
+
+**Why we tried it:**
+To systematically optimize the instruction formats and contexts that guide the chosen LLM toward consistent, structured JSON output and near-human accuracy, without needing model retraining.
 
 **Approach**: Tested different prompting strategies
 
@@ -43,6 +49,9 @@ For each experiment, document:
 
 ## PDF Parsing
 
+**Why we tried it:**
+Because raw PDF data varies widely in layout and structure; we needed a reliable text extraction baseline before applying LLM understanding, and wanted to quantify how much traditional parsers contributed versus AI understanding alone.
+
 **Tried**: PyPDF2, pdfplumber, PyMuPDF, Tabula
 
 **Winner**: PyPDF2 + LLM combination
@@ -57,15 +66,20 @@ For each experiment, document:
 ## Architecture Evolution
 
 **Tried**:
-1. Monolithic single agent ❌
-2. Two-agent system ⚠️
-3. Six specialized agents ✅
+1. Monolithic single agent
+2. Two-agent system
+3. Six specialized agents
 
-**Why Multi-Agent Won**:
-- Better modularity
-- Easier to debug
-- Can scale independently
-- Each agent is an expert
+**Why we tried it:**
+To improve scalability, reduce error coupling, and make the system easier to debug as task complexity increased.
+
+**Results**:
+- Single agent: failed under complexity
+- Two agents: partial improvement
+- Multi-agent: successful, production-ready
+
+**Lesson**:
+Specialized, modular agents significantly improve accuracy, maintainability, and scalability in complex AI pipelines.
 
 ---
 
